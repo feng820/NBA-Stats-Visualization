@@ -2,7 +2,9 @@
 
 #shot-chart {
     width: 100%;
-    margin: auto;
+    margin-top: -50px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /********SHOTCHART COURT STYLES****** */
@@ -22,7 +24,6 @@
         margin-top: -10%;
     }
 }
-
 @media (min-width: 78em) {
     #shot-chart-container {
         padding-left: 1em;
@@ -58,7 +59,6 @@ svg rect {
     stroke: black;
     fill: none;
 }
-
 svg line {
     stroke: black;
     fill: none;
@@ -93,7 +93,6 @@ path.shot {
     fill: none;
     stroke-width: 0.05;
 }
-
 /********END SHOT STYLES****** */
 /********SHOT TOOLTIPS****** */
 .d3-tip {
@@ -117,7 +116,6 @@ path.shot {
     position: absolute;
     pointer-events: none;
 }
-
 /* Northward tooltips */
 .d3-tip.n:after {
     content: "▼";
