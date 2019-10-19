@@ -16,7 +16,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          CLJ IS 9 ZHU
         </a>
       </header>
     </div>
