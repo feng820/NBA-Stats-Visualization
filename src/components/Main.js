@@ -16,10 +16,13 @@ export class Main extends React.Component {
     }
 
     loadPlayerInfo = (playerName) => {
-        nba.stats.playerInfo({ PlayerID: nba.findPlayer(playerName).playerId }).then((info) => {
-            const playerInfo = Object.assign(info.commonPlayerInfo[0], info.playerHeadlineStats[0]);
-            this.setState({ playerInfo });
-        });
+        nba.stats.playerInfo({ PlayerID: nba.findPlayer(playerName).playerId })
+            .then((info) => {
+                const playerInfo = Object.assign(info.commonPlayerInfo[0], info.playerHeadlineStats[0]);
+                this.setState({ playerInfo });
+            }).catch((err) => {
+                console.log(`Fail to fetch player info with err: ${err}`);
+            });
     }
 
     handleSelectPlayer = (playerName) => {
